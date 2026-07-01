@@ -9,7 +9,10 @@
 
 <div class="header">
     <h1>My GitHub Profile</h1>
-    <p> Ya krutoy specialist !</p>
+    ## Let's connect
+    
+    - **City:** [my-portfolio-bice-six-28.vercel.app](https://torshkhoevnr06.github.io/nakir-my-website/)
+    - **Email:** nakir3000@gmail.com
 </div>
 
 </body>
