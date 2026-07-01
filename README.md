@@ -11,8 +11,8 @@
     <h1>My GitHub Profile</h1>
     <hr>
     <h2>Let's connect</h2>
-    <span>City: https://torshkhoevnr06.github.io/nakir-my-website/</span>
-    <span>Email: nakir3000@gmail.com</span>
+    <p>City: https://torshkhoevnr06.github.io/nakir-my-website/</p>
+    <p>Email: nakir3000@gmail.com</p>
 </div>
 
 </body>
