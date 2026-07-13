@@ -30,12 +30,6 @@
 <stop offset="0%" stop-color="white" stop-opacity="0.06"/>
 <stop offset="100%" stop-color="white" stop-opacity="0"/>
 </linearGradient>
-<linearGradient id="shimmer" x1="0%" y1="0%" x2="100%" y2="0%">
-<stop offset="0%" stop-color="white" stop-opacity="0"/>
-<stop offset="50%" stop-color="white" stop-opacity="0.5"/>
-<stop offset="100%" stop-color="white" stop-opacity="0"/>
-<animateTransform attributeName="gradientTransform" type="translate" values="-1180 0; 1180 0" dur="6s" repeatCount="indefinite"/>
-</linearGradient>
 <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
 <feGaussianBlur stdDeviation="4" result="blur"/>
 <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
@@ -55,7 +49,7 @@
 <circle cx="700" cy="80" r="220" fill="url(#glowC)" filter="url(#bigBlur)"><animate attributeName="cx" values="700;620;700" dur="20s" repeatCount="indefinite"/></circle>
 <rect x="0" y="0" width="1180" height="610" filter="url(#noise)"/>
 <rect x="1.5" y="1.5" width="1177" height="607" rx="27" fill="none" stroke="#1E293B" stroke-width="1"/>
-<rect x="1.5" y="1.5" width="1177" height="607" rx="27" fill="none" stroke="url(#shimmer)" stroke-width="1.5"/>
+<rect x="1.5" y="1.5" width="1177" height="607" rx="27" fill="none" stroke="url(#accentGrad)" stroke-width="2.5" stroke-linecap="round" pathLength="100" stroke-dasharray="10 90" filter="url(#softGlow)"><animate attributeName="stroke-dashoffset" values="0;-100" dur="7s" repeatCount="indefinite"/></rect>
 <g clip-path="url(#leftClip)">
 <rect x="40" y="40" width="400" height="530" rx="22" fill="#0F172A"/>
 <rect x="40" y="40" width="400" height="530" rx="22" fill="url(#glassGrad)"/>
@@ -72,9 +66,10 @@
 <text x="240" y="360" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="20" fill="url(#asciiGrad)" opacity="0">  |    |||    |   <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.001;0.15;1" begin="1.54s" dur="6s" fill="freeze"/></text>
 <text x="240" y="390" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="20" fill="url(#asciiGrad)" opacity="0">  |    |||    |   <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.001;0.15;1" begin="1.76s" dur="6s" fill="freeze"/></text>
 <text x="240" y="420" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="20" fill="url(#asciiGrad)" opacity="0">   \___|||___/    <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.001;0.15;1" begin="1.98s" dur="6s" fill="freeze"/></text>
-<rect x="222" y="454" width="12" height="20" fill="url(#asciiGrad)"><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.51;1" dur="1s" repeatCount="indefinite"/></rect>
+<text x="240" y="484" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="18" fill="url(#asciiGrad)" opacity="0">&gt; ready_<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.001;0.1;1" begin="2.0s" dur="8s" fill="freeze"/></text>
+<rect x="303" y="468" width="10" height="20" fill="url(#asciiGrad)" opacity="0"><animate attributeName="opacity" values="0;0;1;0;1;0;1;0;1;0" keyTimes="0;0.0999;0.1;0.35;0.4;0.65;0.7;0.95;0.96;1" begin="2.0s" dur="8s" repeatCount="indefinite"/></rect>
 </g>
-<rect x="40" y="40" width="400" height="6" fill="rgba(255,255,255,.06)"><animate attributeName="y" values="40;560;40" dur="4s" repeatCount="indefinite"/></rect>
+<rect x="40" y="40" width="400" height="14" fill="rgba(255,255,255,.06)" filter="url(#softGlow)"><animate attributeName="y" values="40;560;40" dur="4.5s" repeatCount="indefinite"/></rect>
 <circle cx="225" cy="545" r="1" fill="#22D3EE" opacity="0.5"><animate attributeName="cy" values="545;515;545" dur="5.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.7;0.1" dur="5.6s" repeatCount="indefinite"/></circle>
 <circle cx="84" cy="97" r="2" fill="#22D3EE" opacity="0.5"><animate attributeName="cy" values="97;67;97" dur="4.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.7;0.1" dur="4.4s" repeatCount="indefinite"/></circle>
 <circle cx="358" cy="89" r="2" fill="#22D3EE" opacity="0.5"><animate attributeName="cy" values="89;59;89" dur="4.9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.7;0.1" dur="4.9s" repeatCount="indefinite"/></circle>
@@ -100,104 +95,80 @@
 <circle cx="508" cy="60" r="6" fill="#FFBD2E"/>
 <circle cx="530" cy="60" r="6" fill="#27C93F"/>
 <text x="800" y="65" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="13" fill="#94A3B8">torshkhoevnr06@github — zsh</text>
-<text x="495" y="118" font-family="Consolas, Menlo, monospace" font-size="15" font-weight="400" fill="#94A3B8" opacity="0">$ whoami<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.001;0.06;1" begin="0.1s" dur="8s" fill="freeze"/></text>
-<text x="495" y="148" font-family="Consolas, Menlo, monospace" font-size="30" font-weight="700" fill="#F8FAFC" opacity="0">Hi 👋<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.001;0.06;1" begin="0.35s" dur="8s" fill="freeze"/></text>
-<text x="495" y="180" font-family="Consolas, Menlo, monospace" font-size="26" font-weight="700" fill="#F8FAFC" opacity="0">I'm torshkhoevNR06<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.001;0.06;1" begin="0.7s" dur="8s" fill="freeze"/></text>
-<clipPath id="roleClipd0"><rect x="491" y="206" width="0" height="30"><animate attributeName="width" keyTimes="0.0000;0.0078;0.0703;0.2109;0.2422;1.0000" values="0;0;340;340;0;0" begin="0s" dur="12.8s" repeatCount="indefinite"/></rect></clipPath>
+<text x="495" y="112" font-family="Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#94A3B8" opacity="0">$ whoami<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.001;0.06;1" begin="0.1s" dur="8s" fill="freeze"/></text>
+<text x="495" y="148" font-family="Consolas, Menlo, monospace" font-size="26" font-weight="700" fill="#F8FAFC" opacity="0">Hi 👋<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.001;0.06;1" begin="0.4s" dur="8s" fill="freeze"/></text>
+<text x="495" y="178" font-family="Consolas, Menlo, monospace" font-size="22" font-weight="700" fill="#F8FAFC" opacity="0">I'm torshkhoevNR06<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.001;0.06;1" begin="0.75s" dur="8s" fill="freeze"/></text>
+<clipPath id="roleClipd0"><rect x="491" y="190" width="0" height="30"><animate attributeName="width" keyTimes="0.0000;0.0078;0.0703;0.2109;0.2422;1.0000" values="0;0;220;220;0;0" begin="0s" dur="12.8s" repeatCount="indefinite"/></rect></clipPath>
 <g clip-path="url(#roleClipd0)">
-<text x="495" y="228" font-family="Consolas, Menlo, monospace" font-size="20" font-weight="600" fill="url(#accentGrad)">Frontend Developer</text>
+<text x="495" y="212" font-family="Consolas, Menlo, monospace" font-size="20" font-weight="600" fill="url(#accentGrad)">Frontend Developer</text>
 </g>
-<rect x="840" y="210" width="10" height="22" fill="#F8FAFC"><animate attributeName="opacity" keyTimes="0.0000;0.0078;0.0703;0.2109;0.2422;1.0000" values="0;0;1;1;0;0" begin="0s" dur="12.8s" repeatCount="indefinite"/></rect>
-<clipPath id="roleClipd1"><rect x="491" y="206" width="0" height="30"><animate attributeName="width" keyTimes="0.0000;0.2578;0.3203;0.4609;0.4922;1.0000" values="0;0;340;340;0;0" begin="0s" dur="12.8s" repeatCount="indefinite"/></rect></clipPath>
+<clipPath id="roleClipd1"><rect x="491" y="190" width="0" height="30"><animate attributeName="width" keyTimes="0.0000;0.2578;0.3203;0.4609;0.4922;1.0000" values="0;0;207;207;0;0" begin="0s" dur="12.8s" repeatCount="indefinite"/></rect></clipPath>
 <g clip-path="url(#roleClipd1)">
-<text x="495" y="228" font-family="Consolas, Menlo, monospace" font-size="20" font-weight="600" fill="url(#accentGrad)">Angular Developer</text>
+<text x="495" y="212" font-family="Consolas, Menlo, monospace" font-size="20" font-weight="600" fill="url(#accentGrad)">Angular Developer</text>
 </g>
-<rect x="840" y="210" width="10" height="22" fill="#F8FAFC"><animate attributeName="opacity" keyTimes="0.0000;0.2578;0.3203;0.4609;0.4922;1.0000" values="0;0;1;1;0;0" begin="0s" dur="12.8s" repeatCount="indefinite"/></rect>
-<clipPath id="roleClipd2"><rect x="491" y="206" width="0" height="30"><animate attributeName="width" keyTimes="0.0000;0.5078;0.5703;0.7109;0.7422;1.0000" values="0;0;340;340;0;0" begin="0s" dur="12.8s" repeatCount="indefinite"/></rect></clipPath>
+<clipPath id="roleClipd2"><rect x="491" y="190" width="0" height="30"><animate attributeName="width" keyTimes="0.0000;0.5078;0.5703;0.7109;0.7422;1.0000" values="0;0;183;183;0;0" begin="0s" dur="12.8s" repeatCount="indefinite"/></rect></clipPath>
 <g clip-path="url(#roleClipd2)">
-<text x="495" y="228" font-family="Consolas, Menlo, monospace" font-size="20" font-weight="600" fill="url(#accentGrad)">RxJS Enthusiast</text>
+<text x="495" y="212" font-family="Consolas, Menlo, monospace" font-size="20" font-weight="600" fill="url(#accentGrad)">RxJS Enthusiast</text>
 </g>
-<rect x="840" y="210" width="10" height="22" fill="#F8FAFC"><animate attributeName="opacity" keyTimes="0.0000;0.5078;0.5703;0.7109;0.7422;1.0000" values="0;0;1;1;0;0" begin="0s" dur="12.8s" repeatCount="indefinite"/></rect>
-<clipPath id="roleClipd3"><rect x="491" y="206" width="0" height="30"><animate attributeName="width" keyTimes="0.0000;0.7578;0.8203;0.9609;0.9922;1.0000" values="0;0;340;340;0;0" begin="0s" dur="12.8s" repeatCount="indefinite"/></rect></clipPath>
+<clipPath id="roleClipd3"><rect x="491" y="190" width="0" height="30"><animate attributeName="width" keyTimes="0.0000;0.7578;0.8203;0.9609;0.9922;1.0000" values="0;0;317;317;0;0" begin="0s" dur="12.8s" repeatCount="indefinite"/></rect></clipPath>
 <g clip-path="url(#roleClipd3)">
-<text x="495" y="228" font-family="Consolas, Menlo, monospace" font-size="20" font-weight="600" fill="url(#accentGrad)">Aspiring Frontend Engineer</text>
+<text x="495" y="212" font-family="Consolas, Menlo, monospace" font-size="20" font-weight="600" fill="url(#accentGrad)">Aspiring Frontend Engineer</text>
 </g>
-<rect x="840" y="210" width="10" height="22" fill="#F8FAFC"><animate attributeName="opacity" keyTimes="0.0000;0.7578;0.8203;0.9609;0.9922;1.0000" values="0;0;1;1;0;0" begin="0s" dur="12.8s" repeatCount="indefinite"/></rect>
-<line x1="495" y1="278" x2="1085" y2="278" stroke="#1E293B" stroke-width="1"/>
-<g opacity="0"><animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.001;0.06;1" begin="3.6s" dur="10s" fill="freeze"/>
-<text x="495" y="312" font-family="Consolas, Menlo, monospace" font-size="14" fill="url(#accentGrad)">Location</text>
-<text x="645" y="312" font-family="Consolas, Menlo, monospace" font-size="14" fill="#94A3B8">Nazran / Ekazhevo, Russia</text>
-</g>
-<g opacity="0"><animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.001;0.06;1" begin="4.0s" dur="10s" fill="freeze"/>
-<text x="495" y="339" font-family="Consolas, Menlo, monospace" font-size="14" fill="url(#accentGrad)">Education</text>
-<text x="645" y="339" font-family="Consolas, Menlo, monospace" font-size="14" fill="#94A3B8">College of Economics and Law — IT &amp; Programming (2024)</text>
-</g>
-<g opacity="0"><animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.001;0.06;1" begin="4.4s" dur="10s" fill="freeze"/>
-<text x="495" y="366" font-family="Consolas, Menlo, monospace" font-size="14" fill="url(#accentGrad)">Current Focus</text>
-<text x="645" y="366" font-family="Consolas, Menlo, monospace" font-size="14" fill="#94A3B8">Angular &amp; RxJS — building real-world projects</text>
-</g>
-<g opacity="0"><animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.001;0.06;1" begin="4.800000000000001s" dur="10s" fill="freeze"/>
-<text x="495" y="393" font-family="Consolas, Menlo, monospace" font-size="14" fill="url(#accentGrad)">Portfolio</text>
-<text x="645" y="393" font-family="Consolas, Menlo, monospace" font-size="14" fill="#94A3B8">torshkhoevnr06.github.io/nakir-my-website</text>
-</g>
-<g opacity="0"><animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.001;0.06;1" begin="5.2s" dur="10s" fill="freeze"/>
-<text x="495" y="420" font-family="Consolas, Menlo, monospace" font-size="14" fill="url(#accentGrad)">Email</text>
-<text x="645" y="420" font-family="Consolas, Menlo, monospace" font-size="14" fill="#94A3B8">nakir3000@gmail.com</text>
-</g>
-<text x="495" y="467" font-family="Consolas, Menlo, monospace" font-size="14" letter-spacing="2" fill="#94A3B8">SKILLS</text>
-<g opacity="0"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.001;0.2" begin="5.0s" dur="6s" fill="freeze"/>
-<rect x="495" y="487" width="77.5" height="32" rx="16" fill="rgba(255,255,255,.04)" stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#softGlow)"><animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3.0s" repeatCount="indefinite"/></rect>
-<text x="533.75" y="508" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#F8FAFC">Angular</text>
-</g>
-<g opacity="0"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.001;0.2" begin="5.15s" dur="6s" fill="freeze"/>
-<rect x="584.5" y="487" width="103.0" height="32" rx="16" fill="rgba(255,255,255,.04)" stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#softGlow)"><animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3.2s" repeatCount="indefinite"/></rect>
-<text x="636.0" y="508" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#F8FAFC">TypeScript</text>
-</g>
-<g opacity="0"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.001;0.2" begin="5.3s" dur="6s" fill="freeze"/>
-<rect x="699.5" y="487" width="52.0" height="32" rx="16" fill="rgba(255,255,255,.04)" stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#softGlow)"><animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3.4s" repeatCount="indefinite"/></rect>
-<text x="725.5" y="508" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#F8FAFC">RxJS</text>
-</g>
-<g opacity="0"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.001;0.2" begin="5.45s" dur="6s" fill="freeze"/>
-<rect x="763.5" y="487" width="103.0" height="32" rx="16" fill="rgba(255,255,255,.04)" stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#softGlow)"><animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3.6s" repeatCount="indefinite"/></rect>
-<text x="815.0" y="508" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#F8FAFC">JavaScript</text>
-</g>
-<g opacity="0"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.001;0.2" begin="5.6s" dur="6s" fill="freeze"/>
-<rect x="878.5" y="487" width="60.5" height="32" rx="16" fill="rgba(255,255,255,.04)" stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#softGlow)"><animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3.8s" repeatCount="indefinite"/></rect>
-<text x="908.75" y="508" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#F8FAFC">HTML5</text>
-</g>
-<g opacity="0"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.001;0.2" begin="5.75s" dur="6s" fill="freeze"/>
-<rect x="951.0" y="487" width="52.0" height="32" rx="16" fill="rgba(255,255,255,.04)" stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#softGlow)"><animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="4.0s" repeatCount="indefinite"/></rect>
-<text x="977.0" y="508" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#F8FAFC">SCSS</text>
-</g>
-<g opacity="0"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.001;0.2" begin="5.9s" dur="6s" fill="freeze"/>
-<rect x="1015.0" y="487" width="43.5" height="32" rx="16" fill="rgba(255,255,255,.04)" stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#softGlow)"><animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="4.2s" repeatCount="indefinite"/></rect>
-<text x="1036.75" y="508" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#F8FAFC">Git</text>
-</g>
-<g opacity="0"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.001;0.2" begin="6.05s" dur="6s" fill="freeze"/>
-<rect x="495" y="529" width="86.0" height="32" rx="16" fill="rgba(255,255,255,.04)" stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#softGlow)"><animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="4.4s" repeatCount="indefinite"/></rect>
-<text x="538.0" y="550" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#F8FAFC">REST API</text>
-</g>
-<line x1="495" y1="581" x2="1085" y2="581" stroke="#1E293B" stroke-width="1"/>
-<g opacity="0"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.001;0.2" begin="6.5s" dur="6s" fill="freeze"/>
-<circle cx="519" cy="621" r="22" fill="rgba(255,255,255,.04)" stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#softGlow)"><animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="3.5s" repeatCount="indefinite"/></circle>
-<text x="519" y="626" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#F8FAFC">GH</text>
-</g>
-<g opacity="0"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.001;0.2" begin="6.65s" dur="6s" fill="freeze"/>
-<circle cx="595" cy="621" r="22" fill="rgba(255,255,255,.04)" stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#softGlow)"><animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="3.8s" repeatCount="indefinite"/></circle>
-<text x="595" y="626" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#F8FAFC">GL</text>
-</g>
-<g opacity="0"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.001;0.2" begin="6.8s" dur="6s" fill="freeze"/>
-<circle cx="671" cy="621" r="22" fill="rgba(255,255,255,.04)" stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#softGlow)"><animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="4.1s" repeatCount="indefinite"/></circle>
-<text x="671" y="626" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#F8FAFC">TG</text>
-</g>
-<g opacity="0"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.001;0.2" begin="6.95s" dur="6s" fill="freeze"/>
-<circle cx="747" cy="621" r="22" fill="rgba(255,255,255,.04)" stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#softGlow)"><animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="4.4s" repeatCount="indefinite"/></circle>
-<text x="747" y="626" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#F8FAFC">IG</text>
-</g>
-<g opacity="0"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.001;0.2" begin="7.1s" dur="6s" fill="freeze"/>
-<circle cx="823" cy="621" r="22" fill="rgba(255,255,255,.04)" stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#softGlow)"><animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="4.7s" repeatCount="indefinite"/></circle>
-<text x="823" y="626" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#F8FAFC">DU</text>
-</g>
+<line x1="495" y1="242" x2="1085" y2="242" stroke="#1E293B" stroke-width="1"/>
+<text x="495" y="262" font-family="Consolas, Menlo, monospace" font-size="14" fill="url(#accentGrad)">Location</text>
+<text x="645" y="262" font-family="Consolas, Menlo, monospace" font-size="14" fill="#94A3B8">Nazran / Ekazhevo, Russia</text>
+<text x="495" y="286" font-family="Consolas, Menlo, monospace" font-size="14" fill="url(#accentGrad)">Education</text>
+<text x="645" y="286" font-family="Consolas, Menlo, monospace" font-size="14" fill="#94A3B8">College of Economics and Law — IT &amp; Programming (2024)</text>
+<text x="495" y="310" font-family="Consolas, Menlo, monospace" font-size="14" fill="url(#accentGrad)">Current Focus</text>
+<text x="645" y="310" font-family="Consolas, Menlo, monospace" font-size="14" fill="#94A3B8">Angular &amp; RxJS — building real-world projects</text>
+<text x="495" y="334" font-family="Consolas, Menlo, monospace" font-size="14" fill="url(#accentGrad)">Portfolio</text>
+<text x="645" y="334" font-family="Consolas, Menlo, monospace" font-size="14" fill="#94A3B8">torshkhoevnr06.github.io/nakir-my-website</text>
+<text x="495" y="358" font-family="Consolas, Menlo, monospace" font-size="14" fill="url(#accentGrad)">Email</text>
+<text x="645" y="358" font-family="Consolas, Menlo, monospace" font-size="14" fill="#94A3B8">nakir3000@gmail.com</text>
+<text x="495" y="396" font-family="Consolas, Menlo, monospace" font-size="14" letter-spacing="2" fill="#94A3B8">SKILLS</text>
+<rect x="495" y="414" width="77.5" height="30" rx="15" fill="rgba(255,255,255,.04)" stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#softGlow)"><animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3.0s" repeatCount="indefinite"/></rect>
+<text x="533.75" y="434" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#F8FAFC">Angular</text>
+<rect x="584.5" y="414" width="103.0" height="30" rx="15" fill="rgba(255,255,255,.04)" stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#softGlow)"><animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3.2s" repeatCount="indefinite"/></rect>
+<text x="636.0" y="434" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#F8FAFC">TypeScript</text>
+<rect x="699.5" y="414" width="52.0" height="30" rx="15" fill="rgba(255,255,255,.04)" stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#softGlow)"><animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3.4s" repeatCount="indefinite"/></rect>
+<text x="725.5" y="434" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#F8FAFC">RxJS</text>
+<rect x="763.5" y="414" width="103.0" height="30" rx="15" fill="rgba(255,255,255,.04)" stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#softGlow)"><animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3.6s" repeatCount="indefinite"/></rect>
+<text x="815.0" y="434" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#F8FAFC">JavaScript</text>
+<rect x="878.5" y="414" width="60.5" height="30" rx="15" fill="rgba(255,255,255,.04)" stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#softGlow)"><animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3.8s" repeatCount="indefinite"/></rect>
+<text x="908.75" y="434" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#F8FAFC">HTML5</text>
+<rect x="951.0" y="414" width="52.0" height="30" rx="15" fill="rgba(255,255,255,.04)" stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#softGlow)"><animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="4.0s" repeatCount="indefinite"/></rect>
+<text x="977.0" y="434" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#F8FAFC">SCSS</text>
+<rect x="1015.0" y="414" width="43.5" height="30" rx="15" fill="rgba(255,255,255,.04)" stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#softGlow)"><animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="4.2s" repeatCount="indefinite"/></rect>
+<text x="1036.75" y="434" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#F8FAFC">Git</text>
+<rect x="495" y="454" width="86.0" height="30" rx="15" fill="rgba(255,255,255,.04)" stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#softGlow)"><animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="4.4s" repeatCount="indefinite"/></rect>
+<text x="538.0" y="474" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#F8FAFC">REST API</text>
+<line x1="495" y1="498" x2="1085" y2="498" stroke="#1E293B" stroke-width="1"/>
+<circle cx="515" cy="524" r="20" fill="rgba(255,255,255,.04)" stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#softGlow)"><animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="3.5s" repeatCount="indefinite"/></circle>
+<text x="515" y="529" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#F8FAFC">GH</text>
+<circle cx="591" cy="524" r="20" fill="rgba(255,255,255,.04)" stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#softGlow)"><animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="3.8s" repeatCount="indefinite"/></circle>
+<text x="591" y="529" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#F8FAFC">GL</text>
+<circle cx="667" cy="524" r="20" fill="rgba(255,255,255,.04)" stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#softGlow)"><animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="4.1s" repeatCount="indefinite"/></circle>
+<text x="667" y="529" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#F8FAFC">TG</text>
+<circle cx="743" cy="524" r="20" fill="rgba(255,255,255,.04)" stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#softGlow)"><animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="4.4s" repeatCount="indefinite"/></circle>
+<text x="743" y="529" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#F8FAFC">IG</text>
+<circle cx="819" cy="524" r="20" fill="rgba(255,255,255,.04)" stroke="url(#accentGrad)" stroke-width="1.2" filter="url(#softGlow)"><animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="4.7s" repeatCount="indefinite"/></circle>
+<text x="819" y="529" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#F8FAFC">DU</text>
+<circle cx="473" cy="309" r="1.8" fill="#22D3EE" opacity="0.3"><animate attributeName="cy" values="309;285;309" dur="7.1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.05;0.45;0.05" dur="7.1s" repeatCount="indefinite"/></circle>
+<circle cx="1110" cy="340" r="1" fill="#22D3EE" opacity="0.3"><animate attributeName="cy" values="340;316;340" dur="9.9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.05;0.45;0.05" dur="9.9s" repeatCount="indefinite"/></circle>
+<circle cx="483" cy="508" r="1.8" fill="#22D3EE" opacity="0.3"><animate attributeName="cy" values="508;484;508" dur="5.9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.05;0.45;0.05" dur="5.9s" repeatCount="indefinite"/></circle>
+<circle cx="1125" cy="215" r="1" fill="#22D3EE" opacity="0.3"><animate attributeName="cy" values="215;191;215" dur="5.1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.05;0.45;0.05" dur="5.1s" repeatCount="indefinite"/></circle>
+<circle cx="486" cy="314" r="1" fill="#22D3EE" opacity="0.3"><animate attributeName="cy" values="314;290;314" dur="5.7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.05;0.45;0.05" dur="5.7s" repeatCount="indefinite"/></circle>
+<circle cx="1106" cy="214" r="1.8" fill="#22D3EE" opacity="0.3"><animate attributeName="cy" values="214;190;214" dur="5.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.05;0.45;0.05" dur="5.2s" repeatCount="indefinite"/></circle>
+<circle cx="481" cy="410" r="1.3" fill="#22D3EE" opacity="0.3"><animate attributeName="cy" values="410;386;410" dur="5.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.05;0.45;0.05" dur="5.2s" repeatCount="indefinite"/></circle>
+<circle cx="1113" cy="371" r="1.3" fill="#22D3EE" opacity="0.3"><animate attributeName="cy" values="371;347;371" dur="8.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.05;0.45;0.05" dur="8.5s" repeatCount="indefinite"/></circle>
+<circle cx="488" cy="283" r="1" fill="#22D3EE" opacity="0.3"><animate attributeName="cy" values="283;259;283" dur="5.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.05;0.45;0.05" dur="5.8s" repeatCount="indefinite"/></circle>
+<circle cx="1097" cy="158" r="1" fill="#22D3EE" opacity="0.3"><animate attributeName="cy" values="158;134;158" dur="7.3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.05;0.45;0.05" dur="7.3s" repeatCount="indefinite"/></circle>
+<circle cx="485" cy="467" r="1.3" fill="#22D3EE" opacity="0.3"><animate attributeName="cy" values="467;443;467" dur="7.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.05;0.45;0.05" dur="7.0s" repeatCount="indefinite"/></circle>
+<circle cx="1101" cy="190" r="1.8" fill="#22D3EE" opacity="0.3"><animate attributeName="cy" values="190;166;190" dur="5.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.05;0.45;0.05" dur="5.2s" repeatCount="indefinite"/></circle>
+<circle cx="475" cy="133" r="1" fill="#22D3EE" opacity="0.3"><animate attributeName="cy" values="133;109;133" dur="6.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.05;0.45;0.05" dur="6.0s" repeatCount="indefinite"/></circle>
+<circle cx="1129" cy="468" r="1" fill="#22D3EE" opacity="0.3"><animate attributeName="cy" values="468;444;468" dur="5.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.05;0.45;0.05" dur="5.6s" repeatCount="indefinite"/></circle>
+<circle cx="483" cy="381" r="1.3" fill="#22D3EE" opacity="0.3"><animate attributeName="cy" values="381;357;381" dur="6.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.05;0.45;0.05" dur="6.0s" repeatCount="indefinite"/></circle>
+<circle cx="1101" cy="549" r="1.8" fill="#22D3EE" opacity="0.3"><animate attributeName="cy" values="549;525;549" dur="7.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.05;0.45;0.05" dur="7.0s" repeatCount="indefinite"/></circle>
 <rect x="461" y="41" width="678" height="528" rx="21" fill="none" stroke="#1E293B" stroke-width="1"/>
 </g>
 </g>
