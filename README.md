@@ -6,6 +6,8 @@
 </head>
 <body>
 
+<img src="./dark.svg" alt="Dark theme">
+
 <div class="header">
     <h1>My GitHub Profile</h1>
     <h3>Let's connect</h3>
