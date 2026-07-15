@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<img width="299" height="400" alt="torshkhoevNR06-gitfut-story" src="https://github.com/user-attachments/assets/404f1096-cfeb-48d0-b199-012edde43dab" />
+<img style="text-aligh: center" width="299" height="400" alt="torshkhoevNR06-gitfut-story" src="https://github.com/user-attachments/assets/404f1096-cfeb-48d0-b199-012edde43dab" />
 <hr>
 <img src="./dark.svg" alt="Dark theme">
 
