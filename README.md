@@ -6,6 +6,8 @@
 </head>
 <body>
 
+<img width="996" height="1512" alt="torshkhoevNR06-gitfut" src="https://github.com/user-attachments/assets/bb0fd392-f3ef-4173-8836-5107b1193c1a" />
+<hr>
 <img src="./dark.svg" alt="Dark theme">
 
 <div class="header">
