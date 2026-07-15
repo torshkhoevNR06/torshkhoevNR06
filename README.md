@@ -5,10 +5,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<div style="wigth: 100%; text-align: center">
-<img width="299" height="400" alt="torshkhoevNR06-gitfut-story" src="https://github.com/user-attachments/assets/404f1096-cfeb-48d0-b199-012edde43dab" />
-</div>
+<img style="margin-left: 50%" width="299" height="400" alt="torshkhoevNR06-gitfut-story" src="https://github.com/user-attachments/assets/404f1096-cfeb-48d0-b199-012edde43dab" />
 <hr>
 <img src="./dark.svg" alt="Dark theme">
 
