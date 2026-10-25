@@ -13,7 +13,7 @@ Frontend developer in the making, currently working as a security guard on a rot
 - 🎯 **Focus:** Angular Development · RxJS · Frontend Engineering
 - 🛣️ **Background:** Security Operations → transitioning into Frontend Development
 - 📍 **Based in:** Nazran / Ekazhevo, Russia
-- 🌐 **Portfolio:** [torshkhoevnr06.github.io/my-portfolio](https://torshkhoevnr06.github.io/my-portfolio/)
+- 🌐 **Portfolio:** [nakir-portfolio.netlify.app](https://nakir-portfolio.netlify.app/)
 - ✉️ **Email:** [nakir3000@gmail.com](mailto:nakir3000@gmail.com)
 
 <br>
